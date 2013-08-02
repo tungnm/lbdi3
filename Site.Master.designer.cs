@@ -22,6 +22,51 @@ namespace C2C {
         protected global::System.Web.UI.HtmlControls.HtmlForm Form3;
         
         /// <summary>
+        /// panelLogin control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Panel panelLogin;
+        
+        /// <summary>
+        /// panelAdvisorLogged control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Panel panelAdvisorLogged;
+        
+        /// <summary>
+        /// lblAdvisorWelcome control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblAdvisorWelcome;
+        
+        /// <summary>
+        /// panelEmployerLogged control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Panel panelEmployerLogged;
+        
+        /// <summary>
+        /// lblEmployerWelcome control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblEmployerWelcome;
+        
+        /// <summary>
         /// lblGlobalMessage control.
         /// </summary>
         /// <remarks>

@@ -74,9 +74,31 @@ namespace C2C
                 lblGlobalMessage.Text = Session[C2CUtil.MESSAGE].ToString();
                 Session[C2CUtil.MESSAGE] = null;
             }
-            if (Session[C2CUtil.CURRENT_USER] != null)
+            //if not logged
+            if (Session[C2CUtil.LOGED_IN] == null)
             {
-                
+                panelLogin.Visible = true;
+                panelAdvisorLogged.Visible = false;
+                panelEmployerLogged.Visible = false;
+            }
+            //if advisor logged
+            if (Session[C2CUtil.USER_ADVISOR] != null)
+            {
+                ModelLayer.Advisor currentUser = (ModelLayer.Advisor)Session[C2CUtil.CURRENT_USER];
+                lblAdvisorWelcome.Text = "Welcome, " + currentUser.User_Salutation + " " + currentUser.User_Fullname;
+                panelAdvisorLogged.Visible = true;
+                panelLogin.Visible = false;
+                panelEmployerLogged.Visible = false;
+            }
+
+            //if Employer logged
+            if (Session[C2CUtil.USER_EMPLOYER] != null)
+            {
+                ModelLayer.Employer currentUser = (ModelLayer.Employer)Session[C2CUtil.CURRENT_USER];
+                lblEmployerWelcome.Text = "Welcome, " + currentUser.User_Salutation + " " + currentUser.User_Fullname;
+                panelAdvisorLogged.Visible = false;
+                panelLogin.Visible = false;
+                panelEmployerLogged.Visible = true;
             }
         }
     }

@@ -7,10 +7,18 @@ Edit by mtung
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="content-type" content="text/html; charset=utf-8" />
-<title>C2C</title>
+    <link rel="shortcut icon" href="/Images/Icon/My-Websites-icon.ico" />
+<title>Coursework2Career</title>
 <meta name="keywords" content="" />
 <meta name="description" content="" />
     <link href="../default.css" rel="stylesheet" type="text/css" />
+    <style type="text/css">
+        .auto-style100 {
+            color: #FF0000;
+            font-size: small;
+            background-color: #FFFFCC;
+        }
+    </style>
     </head>
 <body>
      <form id="Form3" runat="server">
@@ -34,25 +42,52 @@ Edit by mtung
 		</div>
 		<!-- end menu -->
 		<div id="login">
-			<h2 class="title1">Customer Login</h2>
-			<form id="form2" method="post" action="#">
-				<fieldset>
-				<label for="inputtext1">Username:</label>
-				<input id="inputtext1" type="text" name="inputtext1" value="" />
-				<label for="inputtext2">Password:</label>
-				<input id="inputtext2" type="password" name="inputtext2" value="" />
-				<input id="inputsubmit1" type="submit" name="inputsubmit1" value="Sign In" />
-				<p><a href="#">Forgot your password?</a><br />
-					<a href="#">Register for Free!</a></p>
-				</fieldset>
-			</form>
-		</div> Test area
+            <asp:Panel ID="panelLogin" runat="server" Visible="False">
+                <h2 class="title1">Member Area:</h2>
+			<a href="/Pages/UserLogin.aspx"><h2 class="title1">Login</h2></a>
+                <a href="/Pages/SelectType.aspx"><h2 class="title1">Register</h2></a>
+                </asp:Panel>
+
+            <asp:Panel ID="panelAdvisorLogged" runat="server" Visible="False">
+                                <strong>
+                <asp:Label ID="lblAdvisorWelcome" runat="server" CssClass="auto-style100"></asp:Label>
+                </strong>
+
+                    <a href="/Pages/AdvisorMainPage.aspx"><h2 class="title1">Advisor Main Menu</h2></a>
+                    <a href="/Pages/BrowseJobs.aspx"><h2 class="title1">Browse Internships</h2></a>
+                    <a href="/Pages/BrowseCompanies.aspx"><h2 class="title1">Browse Companies</h2></a>
+                    <a href="/Pages/PostResume.aspx"><h2 class="title1">Upload New Resume</h2></a>
+                    <a href="/Pages/AdvisorProfile.aspx"><h2 class="title1">My Account Profile</h2></a>
+                    <a href="/Pages/AdvisorProfile.aspx"><h2 class="title1">Change Password</h2></a>
+                    <a href="/Pages/LogOut.aspx"><h2 class="title1">Log Out</h2></a>
+
+                
+
+            </asp:Panel>
+
+                        <asp:Panel ID="panelEmployerLogged" runat="server" Visible="False">
+                                <strong>
+                <asp:Label ID="lblEmployerWelcome" runat="server" CssClass="auto-style100"></asp:Label>
+                </strong>
+
+                    <a href="/Pages/EmployerMain.aspx"><h2 class="title1">Employer Main Menu</h2></a>
+                    <a href="/Pages/BrowseResumes.aspx"><h2 class="title1">Browse Resumes</h2></a>
+                    <a href="/Pages/PostJob.aspx"><h2 class="title1">Post New Internship</h2></a>
+                    <a href="/Pages/EmployerProfile.aspx"><h2 class="title1">My Account Profile</h2></a>
+                    <a href="/Pages/EmployerProfile.aspx"><h2 class="title1">Change Password</h2></a>
+                    <a href="/Pages/LogOut.aspx"><h2 class="title1">Log Out</h2></a>
+
+                
+
+            </asp:Panel>
+		</div>
+
 	</div>
 	<!-- end sidebar -->
 	<div id="content">
-        <div><img id="bannerImage" src="../images/img08.jpg" alt="" width="740" height="220" /></div>
+        <div><img id="bannerImage" src="../images/img08.jpg" alt="" width="1040" height="220" /></div>
        
-         <h4 id="buoiID">Welcome to c2c</h4>
+         <%--<h4 id="buoiID">Welcome to c2c</h4>--%>
 		  <asp:Label ID="lblGlobalMessage" runat="server" BorderColor="Blue" BorderStyle="None" Style="font-size: large; color: #FF0000; background-color: #EFEEEF; font-weight: 700;"></asp:Label>
 
              

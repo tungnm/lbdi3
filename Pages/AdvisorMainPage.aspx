@@ -17,7 +17,7 @@
                 <asp:Label ID="lblWelcome" runat="server" Text="Welcome" Font-Bold="True" Font-Size="Medium" ForeColor="Red" CssClass="auto-style1"></asp:Label>
 
     </p>
-    <ul style="text-align: left" class="auto-style1">
+    <ul style="text-align: left; font-size: large;" class="auto-style1">
         <li>
             <asp:HyperLink ID="HyperLink2" runat="server"
                 NavigateUrl='~/Pages/AdvisorProfile.aspx'
