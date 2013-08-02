@@ -82,7 +82,7 @@ namespace C2C.Pages
                 QueryResult result = DataManager.UpdateEmployer(updateEmployer, txtUserCurrentPassword.Text, thisEmployer1.EmployerId);
                 if (result == QueryResult.Success)
                 {
-                    lblMessage.Text = "Profile information has been updated successfully.";
+                    lblMessage.Text = "Profile information has been updated successfully.Login again to see the changes.";
                     //Session[C2CUtil.LOGED_IN] = null;
                 }
                 else lblMessage.Text = "Update failed";

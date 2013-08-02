@@ -40,13 +40,13 @@ namespace C2C.Pages {
         protected global::System.Web.UI.WebControls.Button btnBack3;
         
         /// <summary>
-        /// txtTitle control.
+        /// lblTitle control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtTitle;
+        protected global::System.Web.UI.WebControls.Label lblTitle;
         
         /// <summary>
         /// txtCompany control.
@@ -94,22 +94,22 @@ namespace C2C.Pages {
         protected global::System.Web.UI.WebControls.TextBox txtState;
         
         /// <summary>
-        /// txtQualification control.
+        /// lblQualification control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtQualification;
+        protected global::System.Web.UI.WebControls.Label lblQualification;
         
         /// <summary>
-        /// txtDescription control.
+        /// lblDescription control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtDescription;
+        protected global::System.Web.UI.WebControls.Label lblDescription;
         
         /// <summary>
         /// txtPostedDate control.

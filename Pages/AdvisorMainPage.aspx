@@ -12,14 +12,18 @@
     </div>
 
 
-    <h1 class="auto-style3">Advisor Menu</h1>
-    <ul style="text-align: left">
-        <asp:Label ID="lblWelcome" runat="server" Text="Welcome" Font-Bold="True" Font-Size="Medium" ForeColor="Red"></asp:Label>
+    <h1 class="auto-style3">Advisor Main Menu</h1>
+    <p>
+                <asp:Label ID="lblWelcome" runat="server" Text="Welcome" Font-Bold="True" Font-Size="Medium" ForeColor="Red" CssClass="auto-style1"></asp:Label>
+
+    </p>
+    <ul style="text-align: left" class="auto-style1">
         <li>
             <asp:HyperLink ID="HyperLink2" runat="server"
                 NavigateUrl='~/Pages/AdvisorProfile.aspx'
-                Text="My Profile" ForeColor="#0000ff" CssClass="auto-style2"></asp:HyperLink>
+                Text="My Profile" ForeColor="#0000ff" CssClass="auto-style2" style="font-size: large"></asp:HyperLink>
         </li>
+
 
         <li>
             <asp:HyperLink ID="HyperLink4" runat="server"
@@ -43,7 +47,7 @@
                 Text="Log Out" ForeColor="#0000ff" CssClass="auto-style2"></asp:HyperLink>
         </li>
     </ul>
-    <p>
+    <p style="text-align: center">
         <asp:Label ID="lblMessage" runat="server" BorderColor="Blue" BorderStyle="Solid" BorderWidth="1px" ForeColor="Red"></asp:Label>
     </p>
     <h1 class="auto-style1">______________________________________</h1>
@@ -51,6 +55,7 @@
     <div class="auto-style3">
         
         <br />
+        <div style="text-align: center">
         <asp:GridView ID="GridView1" runat="server" CellPadding="4" OnRowCreated="GridView1_RowCreated" ForeColor="#333333" GridLines="Horizontal">
             <EditRowStyle BorderStyle="Solid" BackColor="#999999" />
             <FooterStyle BackColor="#5D7B9D" ForeColor="White" Font-Bold="True" />
@@ -83,6 +88,7 @@
             </Columns>
 
         </asp:GridView>
+        </div>
         <asp:ToolkitScriptManager ID="ToolkitScriptManager1" runat="server">
         </asp:ToolkitScriptManager>
         <br />

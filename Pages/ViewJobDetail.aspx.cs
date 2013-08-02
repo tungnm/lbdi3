@@ -58,14 +58,17 @@ namespace C2C.Pages
                 string thisJobState = DataManager.getStateName(thisJob.StateId);
 
 
-                txtTitle.Text = thisJob.Title.ToString();
+                //txtTitle.Text = thisJob.Title.ToString();
+                lblTitle.Text = thisJob.Title.ToString();
                 txtCompany.Text = DataManager.getCompanyNamebyJobID(jobId);
                 txtFunction.Text = thisJobFunction;
                 txtJobtype.Text = thisJob.JType.ToString();
                 txtCity.Text = thisJob.City.ToString();
                 txtState.Text = thisJobState;
-                txtQualification.Text = thisJob.Qualification.ToString();
-                txtDescription.Text = thisJob.Description.ToString();
+                //txtQualification.Text = thisJob.Qualification.ToString();
+                lblQualification.Text = thisJob.Qualification.ToString();
+                //txtDescription.Text = thisJob.Description.ToString();
+                lblDescription.Text = thisJob.Description.ToString();
                 txtPostedDate.Text = thisJob.PostDate.ToString();
                 txtExpDate.Text = thisJob.ExpireDate.ToString();
                 Session[C2CUtil.MESSAGE] = "Displaying Internship Detail";

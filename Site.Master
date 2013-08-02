@@ -2,8 +2,7 @@
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <!--
-Design by lONG nGUYEN=))
-
+Edit by mtung
 -->
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -12,24 +11,25 @@ Design by lONG nGUYEN=))
 <meta name="keywords" content="" />
 <meta name="description" content="" />
     <link href="../default.css" rel="stylesheet" type="text/css" />
-</head>
+    </head>
 <body>
      <form id="Form3" runat="server">
 <div id="page">
 	<div id="sidebar">
 		<div id="logo">
-			<h1><a href="#">Travel Portal</a></h1>
-			<h2><a href="http://www.freecsstemplates.org/">By Free CSS Templates</a></h2>
+			<h1><a href="../Default.aspx">C2C</a></h1>
+			<h2><a href="../Default.aspx">Coursework To Career</a></h2>
 		</div>
 		<!-- end header -->
 		<div id="menu">
 			<ul>
-				<li class="first"><a href="#">Home</a></li>
-				<li><a href="#">Destinations</a></li>
-				<li><a href="#">Travel Packages</a></li>
-				<li><a href="#">Customer Support</a></li>
-				<li><a href="#">About Us</a></li>
-				<li><a href="#">Contact Us</a></li>
+				<li class="first"><a href="../Default.aspx">Home</a></li>
+                <li><a href="/Pages/UserLogin.aspx">Login</a></li>
+				<li><a href="/Pages/AdvisorIntro.aspx">Advisor</a></li>
+				<li><a href="/Pages/EmployerIntro.aspx">Employer</a></li>
+				<li><a href="/Pages/Services.aspx">Services</a></li>
+				<li><a href="/Pages/About.aspx">About Us</a></li>
+				<li><a href="/Pages/ContactUs.aspx">Contact Us</a></li>
 			</ul>
 		</div>
 		<!-- end menu -->
@@ -46,13 +46,13 @@ Design by lONG nGUYEN=))
 					<a href="#">Register for Free!</a></p>
 				</fieldset>
 			</form>
-		</div>sao deo duoc nhi, deo hieu=))thoi de hompage thoi vay. gan duoc roi. dis. ca'i nay la html imgage
+		</div> Test area
 	</div>
 	<!-- end sidebar -->
 	<div id="content">
         <div><img id="bannerImage" src="../images/img08.jpg" alt="" width="740" height="220" /></div>
        
-         <h4 id="buoiID">buoi</h4>
+         <h4 id="buoiID">Welcome to c2c</h4>
 		  <asp:Label ID="lblGlobalMessage" runat="server" BorderColor="Blue" BorderStyle="None" Style="font-size: large; color: #FF0000; background-color: #EFEEEF; font-weight: 700;"></asp:Label>
 
              
@@ -67,7 +67,7 @@ Design by lONG nGUYEN=))
 </div>
 <!-- end page -->
 <div id="footer">
-	<p id="legal">Copyright &copy; 2007 Travel Portal. All Rights Reserved. Designed by <a href="http://www.freecsstemplates.org/">Free CSS Templates</a>.</p>
+	<p id="legal">Copyright &copy; 20013 Coursework2Career. All Rights Reserved. Powered by <a href="http://www.ctex-inc.com/">CTE</a></p>
 	<p id="links"><a href="#">Privacy Policy</a> | <a href="#">Terms of Use</a></p>
 </div>
          </form>

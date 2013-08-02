@@ -6,7 +6,7 @@
         <asp:Label ID="lblMessage" runat="server" BorderColor="Blue" BorderStyle="Solid" BorderWidth="1px" Font-Bold="False" Font-Italic="True" Font-Names="Arial Unicode MS" Font-Size="Medium" ForeColor="Red"></asp:Label>
     </p>
     <h3>Organization Information</h3>
-    <table class="auto-style11">
+    <table class="auto-style11" style="width: 683px; height: 202px">
         <tr>
             <td class="auto-style13">School Name</td>
             <td class="auto-style3">
@@ -39,7 +39,7 @@
         </tr>
         </table>
     <h3>Account Information</h3>
-    <table class="auto-style1">
+    <table style="width: 700px; height: 400px">
         <tr>
             <td class="auto-style13">Salutation</td>
             <td class="auto-style3">
@@ -140,7 +140,7 @@
             <td>&nbsp;</td>
         </tr>
     </table>
-    <p style="margin-left: 160px">
-        <asp:Button ID="btnSubmit" runat="server" OnClick="btnSubmit_Click" Text="Submit" />
+    <p style="margin-left: 160px; text-align: center;">
+        <asp:Button ID="btnSubmit" runat="server" OnClick="btnSubmit_Click" Text="Submit" CssClass="auto-style1" Height="45px" Width="78px" />
     </p>
 </asp:Content>

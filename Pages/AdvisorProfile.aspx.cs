@@ -76,7 +76,7 @@ namespace C2C.Pages
                 QueryResult result = DataManager.UpdateAdvisor(updateAdvisor, txtUserCurrentPassword.Text, thisAdvisor1.AdvisorId);
                 if (result == QueryResult.Success)
                 {
-                    lblMessage.Text = "Profile information has been updated successfully.";
+                    lblMessage.Text = "Profile information has been updated successfully. Login again to see the changes.";
                     //Session[C2CUtil.LOGED_IN] = null;
                 }
                 else lblMessage.Text = "Update failed";

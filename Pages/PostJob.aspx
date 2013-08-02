@@ -4,17 +4,17 @@
 <asp:Content runat="server" ID="cMainContent" ContentPlaceHolderID="MainContent">
 
     <div class="auto-style1">
-        <p>
+        <p style="text-align: center">
             <asp:Label ID="lblMessage" runat="server" BorderColor="Blue" BorderStyle="Solid" BorderWidth="1px" Font-Bold="False" Font-Italic="True" Font-Names="Arial Unicode MS" Font-Size="Medium" ForeColor="Red"></asp:Label>
         </p>
-        <p>
-            <asp:Button ID="btnBack" runat="server" OnClick="btnBack_Click" Text="Go Back to Main Page" CausesValidation="False" />
+        <p style="text-align: center">
+            <asp:Button ID="btnBack" runat="server" OnClick="btnBack_Click" Text="Go Back to Main Page" CausesValidation="False" Height="45px" />
         </p>
         <h1 class="auto-style1">Post A New Internship</h1>
 
-        <table border="0" class="newStyle1">
+        <table border="0" style="font-size: small">
             <tr>
-                <td class="auto-style6">Title (350 characters)</td>
+                <td class="auto-style6">Title</td>
                 <td class="auto-style7">
                     <asp:TextBox ID="txtTitle" runat="server" Width="580px" MaxLength="350" CssClass="auto-style9"></asp:TextBox>
                 </td>
@@ -48,6 +48,7 @@
             <tr>
                 <td class="auto-style5">
                 City
+                    </td>
                 <td class="auto-style3">
                     <asp:TextBox ID="txtCity" runat="server" Width="200px" MaxLength="50" CssClass="auto-style9"></asp:TextBox>
                 </td>
@@ -115,25 +116,17 @@
 
             </tr>
 
-            <tr>
-                <td class="auto-style5">&nbsp;</td>
-                <td class="auto-style3">&nbsp;</td>
-
-                <td class="auto-style10">&nbsp;</td>
-
-            </tr>
-
-        </table>
+            </table>
 
         <div class="auto-style1">
 
+            <p style="text-align: center">
+                <asp:Button ID="btnPost" runat="server" OnClick="btnPost_Click" Text="Post" Width="150px" Height="45px" />
+            </p>
             <br />
-            &nbsp;<asp:Button ID="btnPost" runat="server" OnClick="btnPost_Click" Text="Post" Width="150px" />
-            <br />
-            <br />
-            <br />
-            <br />
-            <asp:Button ID="btnBack0" runat="server" OnClick="btnBack_Click" Text="Go Back to Main Page" CausesValidation="False" />
+            <p style="text-align: center">
+            <asp:Button ID="btnBack0" runat="server" OnClick="btnBack_Click" Text="Go Back to Main Page" CausesValidation="False" Height="45px" />
+            </p>
             <br />
         </div>
     </div>

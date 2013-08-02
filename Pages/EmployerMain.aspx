@@ -12,8 +12,12 @@
         </div>
 
 <h1 class="auto-style4">Employer Menu</h1>
-    <ul style="text-align: left; font-size: large;">
-            <asp:Label ID="lblWelcome" runat="server" Text="Welcome" Font-Bold="True" Font-Size="Medium" ForeColor="Red"></asp:Label>
+
+    <p>
+       <asp:Label ID="lblWelcome" runat="server" Text="Welcome" Font-Bold="True" Font-Size="Large" ForeColor="Red" CssClass="auto-style1"></asp:Label>
+
+    </p>
+        <ul style="text-align: left; font-size: large;">
         <li>
      <asp:HyperLink ID="HyperLink2" runat="server"
                         NavigateUrl='~/Pages/EmployerProfile.aspx'
@@ -37,7 +41,7 @@
                         Text="Log Out" ForeColor="#0000ff" CssClass="auto-style2"></asp:HyperLink>
             </li>
     </ul>
-    <p>
+    <p style="text-align: center">
 
         <asp:Label ID="lblMessage" runat="server" BorderColor="Blue" BorderStyle="Solid" BorderWidth="1px" ForeColor="Red"></asp:Label>
 
@@ -45,7 +49,9 @@
     <h1 class="auto-style1">______________________________________</h1>
     <h1 class="auto-style3">My Posted Internships</h1>
 
-        <asp:GridView ID="GridView1" runat="server" CellPadding="4" OnRowCreated="GridView1_RowCreated" ForeColor="#333333" GridLines="Horizontal">
+        <div style="text-align: center">
+
+        <asp:GridView ID="GridView1" runat="server" CellPadding="4" OnRowCreated="GridView1_RowCreated" ForeColor="#333333" GridLines="Horizontal" style="font-size: 13px">
             <AlternatingRowStyle BackColor="White" ForeColor="#284775" />
             <EditRowStyle BackColor="#999999" />
             <FooterStyle BackColor="#5D7B9D" Font-Bold="True" ForeColor="White" />
@@ -80,10 +86,14 @@
 
         </asp:GridView>
 
+    </div>
+
     <div>
 
         <h1 class="auto-style1">______________________________________</h1>
     <h1 class="auto-style3">Selected Students List</h1>
+
+        <div style="text-align: center">
 
         <asp:GridView ID="GridView2" runat="server" CellPadding="4" OnRowCreated="GridView2_RowCreated" ForeColor="#333333" GridLines="Horizontal">
             <AlternatingRowStyle BackColor="White" ForeColor="#284775" />
@@ -124,9 +134,11 @@
 
         </asp:GridView>
 
+        </div>
+
         <br />
         <h4>
-        <asp:Label ID="Label1" runat="server" Text="Please update hiring status after you interviewed students!" BorderColor="#0099CC" BorderStyle="Solid" BorderWidth="1px" CssClass="auto-style5"></asp:Label>
+        <asp:Label ID="Label1" runat="server" Text="Please update hiring status after you interviewed students!" BorderColor="#0099CC" BorderStyle="Solid" BorderWidth="1px" CssClass="auto-style5" style="color: #FF0000"></asp:Label>
         </h4>
     </div>
     

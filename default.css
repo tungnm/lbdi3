@@ -202,11 +202,12 @@ a:hover {
 #content {
 	float: right;
 	width: 1020px;
-	padding-left: 20px;
+	padding-left: 10px;
+	padding-right: 10px;
 }
 #bannerImage
 {
-margin-left: -20px;
+margin-left: -10px;
 }
 /* Footer */
 

@@ -2,18 +2,16 @@
 
 <asp:Content runat="server" ID="cMainContent" ContentPlaceHolderID="MainContent">
     <div class="auto-style1">
-        <p>
-            <asp:Button ID="btnBack" runat="server" OnClick="btnBack_Click" Text="Browse other Companies" />
+        <p style="text-align: center">
+            <asp:Button ID="btnBack" runat="server" OnClick="btnBack_Click" Text="Browse other Companies" Height="45px" />
         </p>
-        <p>
-            <asp:Label ID="lblMessage" runat="server" BorderColor="Blue" BorderStyle="Solid" BorderWidth="1px" ForeColor="Red"></asp:Label>
+        <p style="text-align: center">
+            <asp:Label ID="lblMessage" runat="server" BorderColor="Blue" BorderStyle="Solid" BorderWidth="1px" ForeColor="Red" style="font-size: medium"></asp:Label>
         </p>
-        <h1 class="auto-style1">_________________________________________</h1>
-        <h1 class="auto-style1">Company Information</h1>
-        <p class="auto-style1">&nbsp;</p>
-        <p>
+        <h1 class="title2">Company Information</h1>
+        <p style="text-align: center">
 
-            <asp:GridView ID="GridView1" runat="server" CellPadding="4" ForeColor="#333333" GridLines="Horizontal">
+            <asp:GridView ID="GridView1" runat="server" CellPadding="4" ForeColor="#333333" GridLines="None" style="font-size: small">
                 <EditRowStyle BorderStyle="Solid" BackColor="#999999" />
                 <FooterStyle BackColor="#5D7B9D" ForeColor="White" Font-Bold="True" />
                 <HeaderStyle BackColor="#5D7B9D" Font-Bold="True" ForeColor="White" />
@@ -30,11 +28,10 @@
             </asp:GridView>
 
         </p>
-        <h1 class="auto-style1">_________________________________________</h1>
-        <h1>Internships from this company</h1>
-        <p>
+        <h1 class="title2">Internships from this company</h1>
+        <p style="text-align: center">
 
-            <asp:GridView ID="GridView2" runat="server" CellPadding="4" OnRowCreated="GridView2_RowCreated" ForeColor="#333333" GridLines="Horizontal">
+            <asp:GridView ID="GridView2" runat="server" CellPadding="4" OnRowCreated="GridView2_RowCreated" ForeColor="#333333" GridLines="None" style="font-size: small">
                 <AlternatingRowStyle BackColor="White" ForeColor="#284775" />
                 <EditRowStyle BackColor="#999999" />
                 <FooterStyle BackColor="#5D7B9D" Font-Bold="True" ForeColor="White" />
@@ -64,9 +61,9 @@
 
 
     </div>
-    <p>
+    <p style="text-align: center">
         &nbsp;
-    <asp:Button ID="btnBack0" runat="server" OnClick="btnBack_Click" Text="Browse other Companies" />
+    <asp:Button ID="btnBack0" runat="server" OnClick="btnBack_Click" Text="Browse other Companies" Height="45px" />
     </p>
 
     <%--   </ContentTemplate>

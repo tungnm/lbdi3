@@ -6,7 +6,7 @@
         <asp:Label ID="lblMessage" runat="server" BorderColor="Blue" BorderStyle="Solid" BorderWidth="1px" Font-Bold="False" Font-Italic="True" Font-Names="Arial Unicode MS" Font-Size="Medium" ForeColor="Red"></asp:Label>
     </p>
     <h3>Organization Information</h3>
-    <table class="auto-style1">
+    <table style="width: 716px; height: 386px">
         <tr>
             <td class="auto-style2">Organization Name</td>
             <td class="auto-style3">
@@ -15,7 +15,6 @@
             <td class="auto-style2">
                 <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="txtCompName" ErrorMessage="*Required" ForeColor="Red"></asp:RequiredFieldValidator>
             </td>
-            <td>&nbsp;</td>
         </tr>
         <tr>
             <td class="auto-style2">Industry</td>
@@ -27,7 +26,6 @@
             <td class="auto-style2">
                 <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ControlToValidate="drlIndustry" ErrorMessage="*Required" ForeColor="Red" InitialValue="Select"></asp:RequiredFieldValidator>
             </td>
-            <td>&nbsp;</td>
         </tr>
         <tr>
             <td class="auto-style2">Website</td>
@@ -35,7 +33,6 @@
                 <asp:TextBox ID="txtWebSite" runat="server" Width="200px" MaxLength="50"></asp:TextBox>
             </td>
             <td class="auto-style2">&nbsp;</td>
-            <td>&nbsp;</td>
         </tr>
         <tr>
             <td class="auto-style2">Description</td>
@@ -45,7 +42,6 @@
             <td class="auto-style2">
                 <asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" ControlToValidate="txtDescription" ErrorMessage="*Required" ForeColor="Red"></asp:RequiredFieldValidator>
             </td>
-            <td>&nbsp;</td>
         </tr>
         <tr>
             <td class="auto-style2">Street Addres</td>
@@ -53,7 +49,6 @@
                 <asp:TextBox ID="txtCompAddress" runat="server" Height="60px" TextMode="MultiLine" Width="200px"></asp:TextBox>
             </td>
             <td class="auto-style2">&nbsp;</td>
-            <td>&nbsp;</td>
         </tr>
         <tr>
             <td class="auto-style2">City</td>
@@ -63,7 +58,6 @@
             <td class="auto-style2">
                 <asp:RequiredFieldValidator ID="RequiredFieldValidator4" runat="server" ControlToValidate="txtCompCity" ErrorMessage="*Required" ForeColor="Red"></asp:RequiredFieldValidator>
             </td>
-            <td>&nbsp;</td>
         </tr>
         <tr>
             <td class="auto-style2">State</td>
@@ -75,7 +69,6 @@
             <td class="auto-style2">
                 <asp:RequiredFieldValidator ID="RequiredFieldValidator5" runat="server" ControlToValidate="drlCompState" ErrorMessage="*Required" ForeColor="Red" InitialValue="Select"></asp:RequiredFieldValidator>
             </td>
-            <td>&nbsp;</td>
         </tr>
         <tr>
             <td class="auto-style2">Zipcode</td>
@@ -83,11 +76,10 @@
                 <asp:TextBox ID="txtCompZipcode" runat="server" Width="200px" MaxLength="50"></asp:TextBox>
             </td>
             <td class="auto-style2">&nbsp;</td>
-            <td>&nbsp;</td>
         </tr>
     </table>
     <h3>Account Information</h3>
-    <table class="auto-style1">
+    <table style="width: 749px; height: 456px; margin-right: 0px">
         <tr>
             <td class="auto-style2">Salutation</td>
             <td class="auto-style3">
@@ -188,7 +180,7 @@
             <td>&nbsp;</td>
         </tr>
     </table>
-    <p style="margin-left: 160px">
-        <asp:Button ID="btnSubmit" runat="server" OnClick="btnSubmit_Click" Text="Submit" />
+    <p style="margin-left: 300px; text-align: left;">
+        <asp:Button ID="btnSubmit" runat="server" OnClick="btnSubmit_Click" Text="Submit" CssClass="auto-style1" Height="45px" />
     </p>
 </asp:Content>

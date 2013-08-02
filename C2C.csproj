@@ -125,7 +125,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="About.aspx" />
+    <Content Include="Pages\About.aspx" />
     <Content Include="Account\Login.aspx" />
     <Content Include="Account\Manage.aspx" />
     <Content Include="Account\OpenAuthProviders.ascx" />
@@ -213,9 +213,10 @@
     <Content Include="Images\orderedList9.png" />
     <Content Include="Images\profilepicture.jpg" />
     <Content Include="Images\woman-using-laptop.jpg" />
-    <Content Include="index.html" />
+    <Content Include="index2.html" />
     <Content Include="packages.config" />
     <None Include="Scripts\jquery-1.7.1.intellisense.js" />
+    <Content Include="Pages\AdvisorIntro.aspx" />
     <Content Include="Pages\AdvisorMainPage.aspx" />
     <Content Include="Pages\AdvisorProfile.aspx" />
     <Content Include="Pages\AdvisorRegistration.aspx" />
@@ -223,6 +224,7 @@
     <Content Include="Pages\BrowseJobs.aspx" />
     <Content Include="Pages\BrowseResumes.aspx" />
     <Content Include="Pages\ContactUs.aspx" />
+    <Content Include="Pages\EmployerIntro.aspx" />
     <Content Include="Pages\EmployerMain.aspx" />
     <Content Include="Pages\EmployerProfile.aspx" />
     <Content Include="Pages\EmployerRegistration.aspx" />
@@ -231,6 +233,7 @@
     <Content Include="Pages\PostJob.aspx" />
     <Content Include="Pages\PostResume.aspx" />
     <Content Include="Pages\SelectType.aspx" />
+    <Content Include="Pages\Services.aspx" />
     <Content Include="Pages\SessionCheck.aspx" />
     <Content Include="Pages\SlideShowTest.aspx" />
     <Content Include="Pages\UserLogin.aspx" />
@@ -282,11 +285,11 @@
   <ItemGroup>
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\AuthConfig.cs" />
-    <Compile Include="About.aspx.cs">
+    <Compile Include="Pages\About.aspx.cs">
       <DependentUpon>About.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="About.aspx.designer.cs">
+    <Compile Include="Pages\About.aspx.designer.cs">
       <DependentUpon>About.aspx</DependentUpon>
     </Compile>
     <Compile Include="Account\Login.aspx.cs">
@@ -316,6 +319,13 @@
     </Compile>
     <Compile Include="Account\Register.aspx.designer.cs">
       <DependentUpon>Register.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\AdvisorIntro.aspx.cs">
+      <DependentUpon>AdvisorIntro.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\AdvisorIntro.aspx.designer.cs">
+      <DependentUpon>AdvisorIntro.aspx</DependentUpon>
     </Compile>
     <Compile Include="Pages\AdvisorMainPage.aspx.cs">
       <DependentUpon>AdvisorMainPage.aspx</DependentUpon>
@@ -365,6 +375,13 @@
     </Compile>
     <Compile Include="Pages\ContactUs.aspx.designer.cs">
       <DependentUpon>ContactUs.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\EmployerIntro.aspx.cs">
+      <DependentUpon>EmployerIntro.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\EmployerIntro.aspx.designer.cs">
+      <DependentUpon>EmployerIntro.aspx</DependentUpon>
     </Compile>
     <Compile Include="Pages\EmployerMain.aspx.cs">
       <DependentUpon>EmployerMain.aspx</DependentUpon>
@@ -437,6 +454,13 @@
     </Compile>
     <Compile Include="Pages\SelectType.aspx.designer.cs">
       <DependentUpon>SelectType.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Services.aspx.cs">
+      <DependentUpon>Services.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\Services.aspx.designer.cs">
+      <DependentUpon>Services.aspx</DependentUpon>
     </Compile>
     <Compile Include="Pages\SessionCheck.aspx.cs">
       <DependentUpon>SessionCheck.aspx</DependentUpon>
