@@ -27,7 +27,7 @@ namespace C2C.Pages
             {
                 List<string> toEmail = new List<string>();
                 toEmail.Add("longbodie@gmail.com");
-                toEmail.Add("longbodie2@gmail.com");
+                //toEmail.Add("longbodie2@gmail.com");
                 string mailTitle = "C2C Notification: Somebody has contacted you on C2C website";
 
                 string mailBody = "<html><body>"
@@ -39,21 +39,6 @@ namespace C2C.Pages
                                     + "<p><b>Please respond this request to the email address above.</b> <br/><font color=#FF0000>PLEASE DO NOT REPLY THIS AUTO GENERATED EMAIL.</body></html>";
 
                 ModelManager.SendEmail(toEmail, mailTitle, mailBody);
-                //MailMessage mail = new MailMessage();
-                //mail.From = new MailAddress(txtEmail.Text);
-                //mail.To.Add("longbodie@gmail.com");
-                //mail.To.Add("longbodie2@gmail.com");
-
-                ////set the content
-                //mail.Subject = "C2C Notification: Somebody contacted you from C2C website";
-                //mail.Body = "this is a sample body with html in it. <b>This is bold</b> <font color=#336699>This is blue</font>";
-                //mail.IsBodyHtml = true;
-
-                ////send the message
-                ////SmtpClient smtp = new SmtpClient("127.0.0.1");
-                //SmtpClient smtp = new SmtpClient();
-
-                //smtp.Send(mail);
 
                 lblMessage.Text = "Thank you for contacting us. We will get back to you soon.";
             }

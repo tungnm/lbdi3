@@ -1158,7 +1158,7 @@ namespace C2C.DataLayer
 
 
                 //string query = "SELECT [Student].[StudentID] AS [ID], [FName] AS [First Name], [LName] AS [Last Name], [Email], [School].[Name] AS [School], [Major].[Name] AS [Major], [Type], [FileName] AS [Resume File], [FileSize] AS [Size(Byte)], [SelectedStudent].[SelectedDate], [SelectedStudent].[Hire] AS [Hiring Status]"
-                string query = "SELECT [Student].[StudentID] AS [ID], [FName] AS [First Name], [LName] AS [Last Name], [Email], [School].[Name] AS [School], [Major].[Name] AS [Major], [Type], [SelectedStudent].[SelectedDate], [SelectedStudent].[Hire] AS [Hiring Status]"
+                string query = "SELECT [SelectedStudent].[SelectedStudentID] AS [List #], [Student].[StudentID] AS [ID], [FName] AS [First Name], [LName] AS [Last Name], [Email], [School].[Name] AS [School], [Major].[Name] AS [Major], [Type], [SelectedStudent].[SelectedDate], [SelectedStudent].[Hire] AS [Hiring Status]"
                 + "FROM [Student], [School], [Major], [SelectedStudent]"
                 + " WHERE [Student].[SchoolID] = [School].[SchoolID] AND [Student].[MajorID] = [Major].[MajorID] AND [SelectedStudent].[StudentID] = [Student].[StudentID] AND [SelectedStudent].[EmployerID] =" + empID;
 
@@ -1175,6 +1175,112 @@ namespace C2C.DataLayer
 
             return selectedstudentList;
 
+        }
+
+        //Browse SelectedStudent by studentID
+        public static DataTable getSelectedStudentID_byStusentID(int studentID)
+        {
+            DataTable selectedstudentList = new DataTable();
+
+            if (ConnectToDB() != QueryResult.Success) return null;
+            using (myConnection)
+            {
+                SqlCommand cmd = new SqlCommand();
+                cmd.Connection = myConnection;
+                cmd.CommandTimeout = 0;
+
+
+                string query = "SELECT [Student].[StudentID] AS [ID], [Student].[FName] AS [First Name], [Student].[LName] AS [Last Name], [Student].[Email], [Student].[Type], [School].[Name] AS [School], [Major].[Name] AS [Major], [Employer].[CName] AS [Selected By],  [SelectedStudent].[SelectedDate] AS [Selected Date], [SelectedStudent].[Hire] AS [Hiring Status]"
+                + "FROM [Student], [School], [Major], [SelectedStudent], [Employer]"
+                + " WHERE [SelectedStudent].[StudentID] = " + studentID + " AND [SelectedStudent].[EmployerID] = [Employer].[EmployerID] AND [SelectedStudent].[StudentID] = [Student].[StudentID] AND [Student].[SchoolID] = [School].[SchoolID] AND [Student].[MajorID] = [Major].[MajorID]";
+
+                cmd.CommandText = query;
+                cmd.CommandType = CommandType.Text;
+                SqlDataAdapter adapter = new SqlDataAdapter();
+
+                adapter.SelectCommand = cmd;
+                adapter.Fill(selectedstudentList);
+
+                DisconnectFromDB();
+
+            }
+
+            return selectedstudentList;
+
+        }
+
+        //Update Selected Student hiring status
+        public static string updateHiringStatus(string status, int ID)
+        {
+            //connect to DB
+            if (ConnectToDB() != QueryResult.Success) return null;
+            using (myConnection)
+            {
+                SqlCommand cmd = new SqlCommand();
+                cmd.Connection = myConnection;
+                cmd.CommandTimeout = 0;
+                cmd.CommandType = CommandType.Text;
+                string query = "UPDATE [SelectedStudent] SET Hire = @status WHERE SelectedStudentID = @ID";
+                cmd.Parameters.Add("@status", SqlDbType.VarChar, 50);
+                cmd.Parameters["@status"].Value = status;
+                cmd.Parameters.Add("@ID", SqlDbType.Int);
+                cmd.Parameters["@ID"].Value = ID;
+
+                cmd.CommandText = query;
+                if (cmd.ExecuteNonQuery() < 1) return null;
+                DisconnectFromDB();
+            }
+            return "Success";
+        }
+
+        //Advisor: get Password by email
+        public static string getAdvisorPasword(string email)
+        {
+            if (ConnectToDB() != QueryResult.Success) return null;
+            using (myConnection)
+            {
+                string password;
+                string query = "SELECT [UPassword] FROM [Advisor] Where [UEmail] = @email";
+                SqlCommand myCommnand = new SqlCommand(query, myConnection);
+                myCommnand.Parameters.Add("@email", SqlDbType.VarChar);
+                myCommnand.Parameters["@email"].Value = email;
+                SqlDataReader reader;
+                reader = myCommnand.ExecuteReader();
+                if (!reader.HasRows)
+                {
+                    DisconnectFromDB();
+                    return null;
+                }
+                reader.Read();
+                password = reader["UPassword"].ToString();
+                DisconnectFromDB();
+                return password;
+            }
+        }
+
+        //Employer: get Password by email
+        public static string getEmployerPasword(string email)
+        {
+            if (ConnectToDB() != QueryResult.Success) return null;
+            using (myConnection)
+            {
+                string password;
+                string query = "SELECT [UPassword] FROM [Employer] Where [UEmail] = @email";
+                SqlCommand myCommnand = new SqlCommand(query, myConnection);
+                myCommnand.Parameters.Add("@email", SqlDbType.VarChar);
+                myCommnand.Parameters["@email"].Value = email;
+                SqlDataReader reader;
+                reader = myCommnand.ExecuteReader();
+                if (!reader.HasRows)
+                {
+                    DisconnectFromDB();
+                    return null;
+                }
+                reader.Read();
+                password = reader["UPassword"].ToString();
+                DisconnectFromDB();
+                return password;
+            }
         }
 
         //-----------------------------------------------------OLD------------------

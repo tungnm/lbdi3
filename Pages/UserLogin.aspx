@@ -43,7 +43,7 @@
     <asp:Button ID="btnSubmit" runat="server" Text="Sign In" OnClick="btnSubmit_Click" Height="35px" style="font-size: large" Width="103px" />
                     <br />
                     <em>Forgot your password?</em> <em>
-                    <asp:HyperLink ID="HyperLink1" runat="server" CssClass="auto-style1">Get password help</asp:HyperLink>
+                    <asp:HyperLink ID="HyperLink1" NavigateUrl="~/Pages/PasswordHelp.aspx" runat="server" CssClass="auto-style1">Get password help</asp:HyperLink>
                     </em>
                     <br />
                     <em>

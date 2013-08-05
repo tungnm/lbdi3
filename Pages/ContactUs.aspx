@@ -5,9 +5,11 @@
 
     <h1 class="title2">CONTACT US</h1>
 
+            <asp:Image ID="Image2" runat="server" src="../images/Web2/page3-img5.jpg" />
+
+
     <p>
-        Please contact <span style="color: #0099CC"><strong>Mrs. Nancy Beggs: (EMAIL)</strong></span> with the <strong><em>Montgomery Area Chamber of Commerce</em></strong><br />
-        if you do not find the information you are seeking on this website.</p>
+        Please contact <span style="color: #0099CC"><strong>Mrs. Nancy Beggs: (EMAIL)</strong></span> with the <strong><em>Montgomery Area Chamber of Commerce </em></strong>if you do not find the information you are seeking on this website.</p>
     <p>
         If you need other assistance please or fill-out the form below:</p>
     <p style="text-align: center">

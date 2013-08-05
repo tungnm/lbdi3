@@ -71,7 +71,7 @@ namespace C2C.Pages
 
                     // Allow only files with .doc .docx .txt .pdf extensions
                     // to be uploaded.
-                    if (((extension == ".doc") || (extension == ".docx") || (extension == ".txt") || (extension == ".pdf")) && fileSize <= 5242880)
+                    if (((extension == ".doc") || (extension == ".docx") || (extension == ".txt") || (extension == ".pdf")) && fileSize <= 2097152)
                     {
                         //HttpFileCollection files = Request.Files;
                         //foreach (string fileTagName in files)
@@ -126,7 +126,7 @@ namespace C2C.Pages
                     
                     else
                     {
-                        lblMessage.Text = "Only allow files with .doc .docx .txt .pdf extensions and Maximum file size is 5MB";
+                        lblMessage.Text = "Only allow files with .doc .docx .txt .pdf extensions and Maximum file size is 2 MB";
                     }
                 }
             }

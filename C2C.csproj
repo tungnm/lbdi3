@@ -231,6 +231,7 @@
     <Content Include="Pages\EmployerRegistration.aspx" />
     <Content Include="Pages\GetFile.aspx" />
     <Content Include="Pages\index.aspx" />
+    <Content Include="Pages\PasswordHelp.aspx" />
     <Content Include="Pages\PostJob.aspx" />
     <Content Include="Pages\PostResume.aspx" />
     <Content Include="Pages\SelectType.aspx" />
@@ -404,6 +405,13 @@
     </Compile>
     <Compile Include="Pages\GetFile.aspx.designer.cs">
       <DependentUpon>GetFile.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\PasswordHelp.aspx.cs">
+      <DependentUpon>PasswordHelp.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\PasswordHelp.aspx.designer.cs">
+      <DependentUpon>PasswordHelp.aspx</DependentUpon>
     </Compile>
     <Compile Include="Pages\PostJob.aspx.cs">
       <DependentUpon>PostJob.aspx</DependentUpon>

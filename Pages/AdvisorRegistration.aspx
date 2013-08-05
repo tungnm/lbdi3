@@ -59,7 +59,7 @@
             <td>&nbsp;</td>
         </tr>
         <tr>
-            <td class="auto-style13">Street Adress</td>
+            <td class="auto-style13">Street Address</td>
             <td class="auto-style3">
                 <asp:TextBox ID="txtUserAddress" runat="server" Height="60px" TextMode="MultiLine" Width="200px"></asp:TextBox>
             </td>

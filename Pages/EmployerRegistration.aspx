@@ -44,7 +44,7 @@
             </td>
         </tr>
         <tr>
-            <td class="auto-style2">Street Addres</td>
+            <td class="auto-style2">Street Address</td>
             <td class="auto-style3">
                 <asp:TextBox ID="txtCompAddress" runat="server" Height="60px" TextMode="MultiLine" Width="200px"></asp:TextBox>
             </td>
@@ -99,7 +99,7 @@
             <td>&nbsp;</td>
         </tr>
         <tr>
-            <td class="auto-style2">Street Adress</td>
+            <td class="auto-style2">Street Address</td>
             <td class="auto-style3">
                 <asp:TextBox ID="txtUserAddress" runat="server" Height="60px" TextMode="MultiLine" Width="200px"></asp:TextBox>
             </td>

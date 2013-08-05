@@ -5,14 +5,14 @@
 
 
 <asp:Content runat="server" ID="BodyContent" ContentPlaceHolderID="MainContent">
-    <p>
-    </p>
-    <div class="float-right">
+        <h1 class="auto-style3">Advisor Main Menu</h1>
+
+    <div>
+    <div class="col-two">
         <asp:Image ID="Image1" runat="server" ImageUrl="~/Images/profilepicture.jpg" />
     </div>
 
-
-    <h1 class="auto-style3">Advisor Main Menu</h1>
+    <div class="col-one">
     <p>
                 <asp:Label ID="lblWelcome" runat="server" Text="Welcome" Font-Bold="True" Font-Size="Medium" ForeColor="Red" CssClass="auto-style1"></asp:Label>
 
@@ -47,10 +47,14 @@
                 Text="Log Out" ForeColor="#0000ff" CssClass="auto-style2"></asp:HyperLink>
         </li>
     </ul>
+        </div>
+        </div>
+
+    <h1 class="auto-style1">______________________________________</h1>
     <p style="text-align: center">
         <asp:Label ID="lblMessage" runat="server" BorderColor="Blue" BorderStyle="Solid" BorderWidth="1px" ForeColor="Red"></asp:Label>
-    </p>
-    <h1 class="auto-style1">______________________________________</h1>
+      </p>  
+
     <h1 class="auto-style4">My Uploaded Resumes </h1>
     <div class="auto-style3">
         
@@ -91,10 +95,27 @@
         </div>
         <asp:ToolkitScriptManager ID="ToolkitScriptManager1" runat="server">
         </asp:ToolkitScriptManager>
-        <br />
-        <br />
-        <br />
 
 
+
+    </div>
+
+     <h1>______________________________________</h1>
+    <h1>Selected Student List</h1>
+    <div style="text-align: center">
+    <asp:GridView ID="GridView2" runat="server" CellPadding="4" OnRowCreated="GridView2_RowCreated" ForeColor="#333333" GridLines="Horizontal">
+            <EditRowStyle BorderStyle="Solid" BackColor="#999999" />
+            <FooterStyle BackColor="#5D7B9D" ForeColor="White" Font-Bold="True" />
+            <HeaderStyle BackColor="#5D7B9D" Font-Bold="True" ForeColor="White" />
+            <PagerStyle ForeColor="White" HorizontalAlign="Center" BackColor="#284775" />
+            <RowStyle BackColor="#F7F6F3" ForeColor="#333333" />
+            <SelectedRowStyle BackColor="#E2DED6" Font-Bold="True" ForeColor="#333333" />
+            <SortedAscendingCellStyle BackColor="#E9E7E2" />
+            <SortedAscendingHeaderStyle BackColor="#506C8C" />
+            <SortedDescendingCellStyle BackColor="#FFFDF8" />
+            <SortedDescendingHeaderStyle BackColor="#6F8DAE" />
+            <AlternatingRowStyle BackColor="White" ForeColor="#284775" />
+            
+        </asp:GridView>
     </div>
 </asp:Content>

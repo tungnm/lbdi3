@@ -60,9 +60,23 @@ a:hover {
 	line-height: 180%;
 }
 
+
 .orange {
 	margin: 20px 30px;
 	background: #FF9523 url(images/img10.gif) repeat-x;
+	color: #FFFFFF;
+}
+.boxed2 {
+	padding: 15px
+}
+
+.orange2 {
+	margin: 20px 30px;
+	background: #238DFF url(images/img100.gif) repeat-x;
+	color: #FFFFFF;
+}
+
+.orange2 a {
 	color: #FFFFFF;
 }
 
@@ -72,12 +86,12 @@ a:hover {
 
 .col-one {
 	float: left;
-	width: 300px;
+	width: 400px;
 }
 
 .col-two {
 	float: right;
-	width: 300px;
+	width: 400px;
 }
 
 /* Page */
@@ -156,7 +170,7 @@ a:hover {
 
 #menu a:hover {
 	text-decoration: underline;
-}
+	}	
 
 /* Login */
 
@@ -194,8 +208,13 @@ a:hover {
 }
 
 #login a {
+	text-decoration: none;
 	color: #FFFFFF;
 }
+
+#login a:hover {
+	text-decoration: underline;
+	}
 
 /* Content */
 

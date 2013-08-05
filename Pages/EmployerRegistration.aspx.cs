@@ -40,12 +40,38 @@ namespace C2C.Pages
         {
             try
             {
-                // can lam o day
                 ModelLayer.Employer newEmployer = new ModelLayer.Employer(txtCompName.Text, System.Convert.ToInt32(drlIndustry.SelectedValue), txtWebSite.Text, txtDescription.Text, txtCompAddress.Text, txtCompCity.Text, System.Convert.ToInt32(drlCompState.SelectedValue), txtCompZipcode.Text, txtUserSalutation.Text, txtUserName.Text, txtUserAddress.Text, txtUserCity.Text, System.Convert.ToInt32(drlUserState.SelectedValue), txtUserZipcode.Text, txtUserPhone.Text, txtUserEmail.Text);
                 QueryResult result = ModelManager.EmployerRegister(newEmployer, txtUserPassword.Text);
                 if (result == QueryResult.Success)
                 {
-                    lblMessage.Text = queryResultMessage[result] + ". Now you can Login and Manage your account.";
+                    lblMessage.Text = queryResultMessage[result] + ". Now you can Login and Manage your account. An email with your login info will be sent to your registered email address.";
+
+                    List<string> toUserEmail = new List<string>();
+                    toUserEmail.Add("longbodie@gmail.com");
+                    //toUserEmail.Add(txtUserEmail.Text);
+                    string mailTitle = "C2C Notification: You have just registered an account on C2C";
+                    string mailBody = "<html><body>"
+                                        + "Your account information on C2C webiste:<br/>"
+                                        + "Email: <b><font color=#336699>" + txtUserEmail.Text + "</font></b><br/>"
+                                        + "Password: <b>" + txtUserPassword.Text + "</b><br>"
+                                        + "<p><b><font color=#FF0000>PLEASE DO NOT REPLY THIS AUTO GENERATED EMAIL.<b></body></html>";
+
+                    ModelManager.SendEmail(toUserEmail, mailTitle, mailBody);
+
+                    List<string> toAdmin = new List<string>();
+                    toAdmin.Add("longbodie@gmail.com");
+                    //toAdmin.Add("MRS NANCY EMAIL");
+                    //toAdmin.Add("MRS ABC EMAIL");
+
+                    string mailTitle2 = "C2C Notification: A new Employer user just registered an account on C2C";
+                    string mailBody2 = "<html><body>"
+                                        + "User account information on C2C webiste:<br/>"
+                                        + "Email: <b><font color=#336699>" + txtUserEmail.Text + "</font></b><br/>"
+                                        + "Name: <b>" + txtUserName.Text + "</b><br>"
+                                        + "Company: <b>" + txtCompName.Text + "</b><br>"
+                                        + "<p><b><font color=#FF0000>PLEASE DO NOT REPLY THIS AUTO GENERATED EMAIL.<b></body></html>";
+
+                    ModelManager.SendEmail(toAdmin, mailTitle2, mailBody2);
                 }
                 else lblMessage.Text = queryResultMessage[result];
             }

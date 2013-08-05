@@ -7,12 +7,13 @@
     <p>
 
     </p>
-    <div class="float-right">
-        <asp:Image ID="Image1" runat="server" ImageUrl="~/Images/profilepicture.jpg" />
-        </div>
+
 
 <h1 class="auto-style4">Employer Menu</h1>
-
+        <div class="col-two">
+        <asp:Image ID="Image1" runat="server" ImageUrl="~/Images/profilepicture.jpg" />
+        </div>
+    <div class ="col-one">
     <p>
        <asp:Label ID="lblWelcome" runat="server" Text="Welcome" Font-Bold="True" Font-Size="Large" ForeColor="Red" CssClass="auto-style1"></asp:Label>
 
@@ -41,12 +42,14 @@
                         Text="Log Out" ForeColor="#0000ff" CssClass="auto-style2"></asp:HyperLink>
             </li>
     </ul>
+        </div>
+    
+    <h1 class="auto-style1">______________________________________</h1>
     <p style="text-align: center">
 
         <asp:Label ID="lblMessage" runat="server" BorderColor="Blue" BorderStyle="Solid" BorderWidth="1px" ForeColor="Red"></asp:Label>
 
     </p>
-    <h1 class="auto-style1">______________________________________</h1>
     <h1 class="auto-style3">My Posted Internships</h1>
 
         <div style="text-align: center">
@@ -124,7 +127,7 @@
                     <asp:Button runat="server" ID="btnHired" Text="Hired" CommandArgument='<%# Container.DataItemIndex %>' OnClick="btnHired_Click"></asp:Button>
                     <asp:Button ID="btnNotHired" runat="server" Text="Not Hired" CommandArgument='<%# Container.DataItemIndex %>' OnClick="btnNotHired_Click" />
 
-                    <asp:ConfirmButtonExtender ID="ConfirmButtonExtender2" runat="server" TargetControlID="btnHired" 
+                    <asp:ConfirmButtonExtender ID="ConfirmButtonExtender2" runat="server" TargetControlID="btnHired"
                         ConfirmText="Confirm! Did you hire this student?"></asp:ConfirmButtonExtender>
                     <asp:ConfirmButtonExtender ID="ConfirmButtonExtender3" runat="server" TargetControlID="btnNotHired" 
                         ConfirmText="Confirm! This student was not hired?"></asp:ConfirmButtonExtender>

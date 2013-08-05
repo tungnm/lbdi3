@@ -29,13 +29,26 @@ namespace C2C.Pages
                 ModelLayer.Advisor currentUser = (ModelLayer.Advisor)Session[C2CUtil.CURRENT_USER];
                 lblWelcome.Text = "Welcome, " + currentUser.User_Salutation + " " + currentUser.User_Fullname;
                 
-                //get current advisor to retrieve his uploaded resume from the database
-                 //get current User:
+
                 DataTable fileList = DataManager.GetAllResumeUploadedBy(currentUser.AdvisorId);
-                //gvFiles.DataSource = fileList;
-                //gvFiles.DataBind();
                 GridView1.DataSource = fileList;
                 GridView1.DataBind();
+
+
+                //get all studentID in gridview1 and use them to populate gridview2
+                DataTable allList = new DataTable();
+                DataTable thisSelectedStudent = new DataTable();
+                foreach(DataRow row in fileList.Rows)
+                {
+                    int thisStudentID = System.Convert.ToInt32(row["ID"].ToString());
+                    thisSelectedStudent = DataManager.getSelectedStudentID_byStusentID(thisStudentID);
+                    allList.Merge(thisSelectedStudent);
+                }
+                GridView2.DataSource = allList;
+                //GridView2.DataSource = thisSelectedStudent;
+                GridView2.DataBind();
+
+
             }
         }
 
@@ -48,6 +61,27 @@ namespace C2C.Pages
             // Intitialize TableCell list
             List<TableCell> columns = new List<TableCell>();
             foreach (DataControlField column in GridView1.Columns)
+            {
+                //Get the first Cell /Column
+                TableCell cell = row.Cells[0];
+                // Then Remove it after
+                row.Cells.Remove(cell);
+                //And Add it to the List Collections
+                columns.Add(cell);
+            }
+
+            // Add cells
+            row.Cells.AddRange(columns.ToArray());
+        }
+
+        // move all of those AutoGenerate Columns to the leftmost columns of the GridView
+        // so the template filed
+        protected void GridView2_RowCreated(object sender, GridViewRowEventArgs e)
+        {
+            GridViewRow row = e.Row;
+            // Intitialize TableCell list
+            List<TableCell> columns = new List<TableCell>();
+            foreach (DataControlField column in GridView2.Columns)
             {
                 //Get the first Cell /Column
                 TableCell cell = row.Cells[0];
@@ -77,11 +111,7 @@ namespace C2C.Pages
                         ModelLayer.Advisor currentUser = (ModelLayer.Advisor)Session[C2CUtil.CURRENT_USER];
                         lblWelcome.Text = "Welcome, " + currentUser.User_Salutation + " " + currentUser.User_Fullname;
 
-                        //get current advisor to retrieve his uploaded resume from the database
-                        //get current User:
                         DataTable fileList = DataManager.GetAllResumeUploadedBy(currentUser.AdvisorId);
-                        //gvFiles.DataSource = fileList;
-                        //gvFiles.DataBind();
                         GridView1.DataSource = fileList;
                         GridView1.DataBind();
                         lblMessage.Text = "Resume has been deleted successfully.";

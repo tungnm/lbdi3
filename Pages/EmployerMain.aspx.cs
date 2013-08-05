@@ -84,12 +84,77 @@ namespace C2C.Pages
 
         protected void btnHired_Click(object sender, EventArgs e)
         {
+            try
+            {
+                int selectedStudentID = System.Convert.ToInt32(GridView2.Rows[Convert.ToInt32(((Button)sender).CommandArgument.ToString())].Cells[0].Text);
+                if (DataManager.updateHiringStatus("Hired", selectedStudentID) == "Success")
+                {
+                    lblMessage.Text = "Student's hiring status has been updated successfully. Thank you!";
+
+                    //refresh Page
+                    //get current User:
+                    ModelLayer.Employer currentUser = (ModelLayer.Employer)Session[C2CUtil.CURRENT_USER];
+                    lblWelcome.Text = "Welcome, " + currentUser.User_Salutation + " " + currentUser.User_Fullname;
+
+                    //internship list
+                    DataTable myjobList = DataManager.GetAllJobPostedBy(currentUser.EmployerId);
+                    GridView1.DataSource = myjobList;
+                    GridView1.DataBind();
+
+                    //select student list
+                    DataTable mySelectedStudent = DataManager.getSelectedStudentID_byEmployerID(currentUser.EmployerId);
+                    GridView2.DataSource = mySelectedStudent;
+                    GridView2.DataBind();
+                }
+                else
+                {
+                    lblMessage.Text = "Update failed. Please try again!";
+                }
+
+            }
+            catch (Exception ex)
+            {
+                lblMessage.Text = "Error: " + ex.Message;
+                return;
+            }
 
         }
 
         protected void btnNotHired_Click(object sender, EventArgs e)
         {
+            try
+            {
+                int selectedStudentID = System.Convert.ToInt32(GridView2.Rows[Convert.ToInt32(((Button)sender).CommandArgument.ToString())].Cells[0].Text);
+                if (DataManager.updateHiringStatus("Not Hired", selectedStudentID) == "Success")
+                {
+                    lblMessage.Text = "Student's hiring status has been updated successfully. Thank you!";
 
+                    //refresh Page
+                    //get current User:
+                    ModelLayer.Employer currentUser = (ModelLayer.Employer)Session[C2CUtil.CURRENT_USER];
+                    lblWelcome.Text = "Welcome, " + currentUser.User_Salutation + " " + currentUser.User_Fullname;
+
+                    //internship list
+                    DataTable myjobList = DataManager.GetAllJobPostedBy(currentUser.EmployerId);
+                    GridView1.DataSource = myjobList;
+                    GridView1.DataBind();
+
+                    //select student list
+                    DataTable mySelectedStudent = DataManager.getSelectedStudentID_byEmployerID(currentUser.EmployerId);
+                    GridView2.DataSource = mySelectedStudent;
+                    GridView2.DataBind();
+                }
+                else
+                {
+                    lblMessage.Text = "Update failed. Please try again!";
+                }
+
+            }
+            catch (Exception ex)
+            {
+                lblMessage.Text = "Error: " + ex.Message;
+                return;
+            }
         }
 
 

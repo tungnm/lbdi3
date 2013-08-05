@@ -41,4 +41,21 @@
 			<div style="clear: both;">&nbsp;</div>
             </div>
 
+    <div class="boxed2 orange2">
+
+        <p style="text-align: center">
+        <a id="A1" href="http://www.alasu.edu" runat="server" target="_blank"><asp:Image ID="Image1" runat="server" src="images/Logos/Alabama State University - www.alasu.edu.jpg" /></a>
+        <a id="A2" href="http://www.aum.edu" runat="server" target="_blank"><asp:Image ID="Image2" runat="server" src="images/Logos/AUM - www.aum.edu.jpg" /></a>
+        <a id="A3" href="http://www.faulkner.edu" runat="server" target="_blank"><asp:Image ID="Image3" runat="server" src="images/Logos/Faulkner University - www.faulkner.edu.gif" /></a>
+        <a id="A4" href="http://www.huntingdon.edu" runat="server" target="_blank"><asp:Image ID="Image4" runat="server" src="images/Logos/Huntingdon university - www.huntingdon.edu.jpg" /></a>
+        <a id="A5" href="http://www.southuniversity.edu" runat="server" target="_blank"><asp:Image ID="Image5" runat="server" src="images/Logos/South University - ww.southuniversity.edu.gif" /></a>
+        <a id="A6" href="http://www.trenholmstate.edu" runat="server" target="_blank"><asp:Image ID="Image6" runat="server" src="images/Logos/Trenholm State Technical College - www.trenholmstate.edu.jpg" /></a>
+        <a id="A7" href="http://www.troy.edu" runat="server" target="_blank"><asp:Image ID="Image7" runat="server" src="images/Logos/Troy University - www.troy.edu.gif" /></a>
+        <a id="A8" href="http://www.tuskegee.edu" runat="server" target="_blank"><asp:Image ID="Image8" runat="server" src="images/Logos/Tuskegee University - www.tuskegee.edu.jpg" /></a>
+        </p>
+
+
+    </div>
+
+
 </asp:Content>

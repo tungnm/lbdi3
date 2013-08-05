@@ -74,7 +74,7 @@
             </td>
         </tr>
         <tr>
-            <td class="auto-style4" style="text-align: right; width: 258px; height: 66px">File upload (Maximum <span class="auto-style7"><strong><span style="color: #FF0000">5</span>MB</strong></span>)<br />
+            <td class="auto-style4" style="text-align: right; width: 258px; height: 66px">File upload (Maximum <span style="color: #FF0000; font-size: large"><strong>2</strong></span><span class="auto-style7"><strong> MB</strong></span>)<br />
                 (Only <span style="color: #FF0000"> <span class="auto-style11">.doc</span><span class="auto-style10">, </span> <span class="auto-style11">.docx</span><span class="auto-style10">, </span> <span class="auto-style12">.txt</span><span class="auto-style10">, </span> <span class="auto-style13">.pdf</span></span>)</td>
             <td class="auto-style6" style="width: 236px; height: 66px">
                 <asp:FileUpload ID="FileResume" runat="server" />
